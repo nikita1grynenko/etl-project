@@ -3,7 +3,6 @@ CREATE DATABASE TaxiData;
 USE TaxiData;
 
 CREATE TABLE TaxiRides (
-    Id BIGINT IDENTITY PRIMARY KEY,
     PickupDatetime DATETIME,
     DropoffDatetime DATETIME,
     PassengerCount INT,

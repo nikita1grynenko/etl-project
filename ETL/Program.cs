@@ -76,7 +76,6 @@ class Program
     static DataTable ToDataTable(IEnumerable<TaxiRide> records)
     {
         var table = new DataTable();
-        table.Columns.Add("Id", typeof(int));
         table.Columns.Add("PickupDatetime", typeof(DateTime));
         table.Columns.Add("DropoffDatetime", typeof(DateTime));
         table.Columns.Add("PassengerCount", typeof(int));
@@ -91,7 +90,6 @@ class Program
         {
             
             table.Rows.Add(
-                record.Id,
                 record.PickupDatetime,
                 record.DropoffDatetime,
                 record.PassengerCount,
@@ -110,7 +108,6 @@ class Program
 
 public class TaxiRide
 {
-    public int Id { get; set; }
     public DateTime PickupDatetime { get; set; }
     public DateTime DropoffDatetime { get; set; }
     public int? PassengerCount { get; set; }
